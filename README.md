@@ -1,16 +1,60 @@
-# React + Vite
+# Pathfinder Spell Forge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Pathfinder Spell Forge** is a web-based, printable reference card generator tailored specifically for Pathfinder 1st Edition. Easily search, customize, and print high-quality physical spell and hex cards right from your browser!
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **Massive Spell Database**: Fully searchable database powered by the massive open source Pathfinder 1e SRD data (containing thousands of spells).
+*   **Witch & Shaman Hexes**: Dedicated hex support with customized formatting for action types, completely hiding irrelevant spell stats (like components). 
+*   **Custom Abilities Engine**: Homebrew your own feats, traits, or class abilities! Your custom creations are saved automatically to your local browser storage (`localStorage`).
+*   **Dynamic Customization**: Add specific character levels or homebrew adjustments to the descriptions of any existing spell.
+*   **Multiple Themes**: Personalize your card decks with rich, stylized thematic backgrounds:
+    *   *Shamanic (Bone & Spirit)*
+    *   *Divine (Holy & Light)*
+    *   *Nature (Earth & Vines)*
+    *   *Arcanist (Neon Runes)*
+    *   *Stars (Cosmic Void)*
+    *   *Library (Ancient Tomes)*
+*   **Automated Print Layout**: Automatically chunks your selected abilities into perfectly sized grids of 9 cards per page for easy A4/Letter size printing.
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project was built using React and Vite.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   [Node.js](https://nodejs.org/) (v16+)
+*   npm or yarn
+
+### Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/pathfinder-spell-forge.git
+    cd pathfinder-spell-forge
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**:
+    ```bash
+    npm run build
+    ```
+
+## 🛠️ Built With
+
+*   [React](https://reactjs.org/)
+*   [Vite](https://vitejs.dev/)
+*   [Lucide Icons](https://lucide.dev/)
+
+## 📝 License
+
+This project is open-source. Pathfinder is a registered trademark of Paizo Inc. This project is not affiliated with, endorsed, or sponsored by Paizo Inc.
