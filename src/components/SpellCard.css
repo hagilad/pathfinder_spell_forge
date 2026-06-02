@@ -1,0 +1,114 @@
+.spell-card-wrapper {
+  /* Playing card standard size (approx 63mm x 88mm) */
+  width: 63mm;
+  height: 88mm;
+  border-radius: 4mm;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow, 0 10px 30px rgba(0,0,0,0.3));
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.spell-card {
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-bg);
+  background-image: var(--theme-pattern);
+  background-size: var(--theme-pattern-size, auto);
+  background-position: center;
+  border: 2mm solid var(--theme-border);
+  border-radius: 4mm;
+  color: var(--theme-text);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif; /* Classic RPG font */
+  padding: 4mm;
+  position: relative;
+}
+
+/* Inner border accent */
+.spell-card::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid var(--theme-header);
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.card-header {
+  border-bottom: 2px solid var(--theme-header);
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+  background: rgba(255, 255, 255, 0.85); /* Opaque backing */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--theme-header);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.card-school {
+  font-size: 0.6rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-top: 1px;
+  color: var(--theme-header);
+  font-weight: bold;
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1px 4px;
+  font-size: 0.5rem;
+  margin-bottom: 4px;
+  background: rgba(255, 255, 255, 0.85); /* Opaque backing */
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: var(--theme-header);
+}
+
+.stat-value {
+  color: #1a1a1a; /* Darker text for readability */
+}
+
+.card-description {
+  font-size: 10px; /* Base size, JS will shrink if needed */
+  line-height: 1.25;
+  overflow-y: hidden;
+  flex: 1;
+  text-align: justify;
+  margin-top: 1px;
+  background: rgba(255, 255, 255, 0.85); /* Opaque backing */
+  padding: 4px;
+  border-radius: 4px;
+  color: #1a1a1a;
+}
+
+/* Print specific adjustments */
+@media print {
+  .spell-card-wrapper {
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .spell-card::after {
+    display: none;
+  }
+}
